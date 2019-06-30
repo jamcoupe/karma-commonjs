@@ -70,7 +70,7 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-npm'
   grunt.loadNpmTasks 'grunt-auto-release'
 
-  grunt.registerTask 'default', ['karma:client', 'build']
+  grunt.registerTask 'default', ['karma:client', 'post-result', 'build']
   grunt.registerTask 'release', 'Build, bump and publish to NPM.', (type) ->
     grunt.task.run [
       'build'

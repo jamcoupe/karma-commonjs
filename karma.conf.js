@@ -5,7 +5,7 @@ module.exports = function(config) {
       'src/*.js',
       'test/*.js'
     ],
-    browsers: process.env.TRAVIS ? ['Firefox'] : ['Chrome'],
+    browsers: ['ChromeHeadless'],
     reporters: ['dots']
   });
 };
