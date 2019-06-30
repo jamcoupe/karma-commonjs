@@ -54,27 +54,27 @@ module.exports = (grunt) ->
       options:
         commitMessage: 'chore: update contributors'
 
+    'npm-publish':
+      options:
+        access: 'public'
+
     'auto-release':
       options:
         remote: 'origin'
-
-    bump:
-      options:
-        commitMessage: 'chore: release v%VERSION%'
-        pushTo: 'origin'
 
   grunt.loadTasks 'tasks'
   grunt.loadNpmTasks 'grunt-contrib-jshint'
   grunt.loadNpmTasks 'grunt-karma'
   grunt.loadNpmTasks 'grunt-bump'
-  grunt.loadNpmTasks 'grunt-npm'
+  grunt.loadNpmTasks '@jcoup/grunt-npm'
   grunt.loadNpmTasks 'grunt-auto-release'
 
   grunt.registerTask 'default', ['karma:client', 'post-result', 'build']
+
   grunt.registerTask 'release', 'Build, bump and publish to NPM.', (type) ->
     grunt.task.run [
       'build'
       'npm-contributors'
-      "bump:#{type||'patch'}"
+      "npm-bump:#{type ? 'patch'}"
       'npm-publish'
     ]
