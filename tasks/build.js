@@ -40,6 +40,8 @@ module.exports = function(grunt) {
           done(1);
         } else {
           grunt.log.ok("Status sent to github");
+
+          console.log(result);
           done(0);
         }
       });
