@@ -10,10 +10,3 @@ before_script:
 
 script:
   - grunt
-
-after_success: |
-  curl
-  --request POST
-  -H "Accept: application/json"
-  --data '{"state":"success", "target_url":"${TRAVIS_BUILD_WEB_URL}", "description":"The build succeeded!", "context":"continuous-integration/travis"}'
-  https://api.github.com/repos/jamcoupe/karma-commonjs/statuses/${TRAVIS_COMMIT}
