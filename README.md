@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/jamcoupe/karma-commonjs.svg?branch=master)](https://travis-ci.org/jamcoupe/karma-commonjs)
 
-# @jamcoupe/karma-commonjs
+# @jcoup/karma-commonjs
 
 > A Karma plugin that allows testing [CommonJS] modules in the browser.
 
@@ -24,16 +24,16 @@ If you're using Browserify to compile your projects, you should consider [karma-
 
 ## Installation
 
-The easiest way is to keep `@jamcoupe/karma-commonjs` as a devDependency:
+The easiest way is to keep `@jcoup/karma-commonjs` as a devDependency:
 
-`npm install @jamcoupe/karma-commonjs --save-dev`
+`npm install @jcoup/karma-commonjs --save-dev`
 
 which should result in the following entry in your `package.json`:
 
 ```json
 {
   "devDependencies": {
-    "@jamcoupe/karma-commonjs": "X.X.X"
+    "@jcoup/karma-commonjs": "X.X.X"
   }
 }
 ```
