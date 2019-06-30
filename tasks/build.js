@@ -34,6 +34,7 @@ module.exports = function(grunt) {
         },
         headers: {
           'User-Agent': 'jamcoupe',
+          Authorization: `token ${process.env.GITHUB_TOKEN}`
         }
       }, (err, result) => {
         if (err) {
@@ -41,7 +42,7 @@ module.exports = function(grunt) {
         } else {
           grunt.log.ok("Status sent to github");
 
-          console.log(result);
+          console.log(result)
           done(0);
         }
       });
